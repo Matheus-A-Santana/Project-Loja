@@ -141,5 +141,11 @@ namespace Loja
             HideSubMenu();
             AbrirFormPanel(new Frm_categoria_produto());
         }
+
+        private void Btn_cadastrar_prod_Click(object sender, EventArgs e)
+        {
+            AbrirFormPanel(new Frm_cadastrar_produto());
+            HideSubMenu();
+        }
     }
 }

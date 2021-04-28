@@ -10,3 +10,16 @@ C:\Users\mathe\Desktop\Loja\Loja\obj\Debug\Loja.exe
 C:\Users\mathe\Desktop\Loja\Loja\obj\Debug\Loja.pdb
 C:\Users\mathe\Desktop\Loja\Loja\obj\Debug\Loja.Frm_entrada_produto.resources
 C:\Users\mathe\Desktop\Loja\Loja\obj\Debug\Loja.Frm_categoria_produto.resources
+D:\Repositório GIT\Loja\Loja\bin\Debug\Loja.exe.config
+D:\Repositório GIT\Loja\Loja\bin\Debug\Loja.exe
+D:\Repositório GIT\Loja\Loja\bin\Debug\Loja.pdb
+D:\Repositório GIT\Loja\Loja\obj\Debug\Loja.csprojAssemblyReference.cache
+D:\Repositório GIT\Loja\Loja\obj\Debug\Loja.Frm_cadastrar_produto.resources
+D:\Repositório GIT\Loja\Loja\obj\Debug\Loja.Frm_categoria_produto.resources
+D:\Repositório GIT\Loja\Loja\obj\Debug\Loja.Frm_entrada_produto.resources
+D:\Repositório GIT\Loja\Loja\obj\Debug\Loja.Frm_Menu.resources
+D:\Repositório GIT\Loja\Loja\obj\Debug\Loja.Properties.Resources.resources
+D:\Repositório GIT\Loja\Loja\obj\Debug\Loja.csproj.GenerateResource.cache
+D:\Repositório GIT\Loja\Loja\obj\Debug\Loja.csproj.CoreCompileInputs.cache
+D:\Repositório GIT\Loja\Loja\obj\Debug\Loja.exe
+D:\Repositório GIT\Loja\Loja\obj\Debug\Loja.pdb

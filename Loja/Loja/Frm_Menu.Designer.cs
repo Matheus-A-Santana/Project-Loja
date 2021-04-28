@@ -34,6 +34,7 @@ namespace Loja
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.P_Sub_produtos = new System.Windows.Forms.Panel();
+            this.Btn_categoria = new System.Windows.Forms.Button();
             this.Btn_entrada = new System.Windows.Forms.Button();
             this.Btn_Produtos = new System.Windows.Forms.Button();
             this.P_Sub_caixa = new System.Windows.Forms.Panel();
@@ -43,7 +44,7 @@ namespace Loja
             this.Btn_caixa = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.PanelForms = new System.Windows.Forms.Panel();
-            this.Btn_categoria = new System.Windows.Forms.Button();
+            this.Btn_cadastrar_prod = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Btn_Exit = new System.Windows.Forms.Button();
             this.Btn_Max_Min = new System.Windows.Forms.Button();
@@ -106,6 +107,7 @@ namespace Loja
             // 
             // P_Sub_produtos
             // 
+            this.P_Sub_produtos.Controls.Add(this.Btn_cadastrar_prod);
             this.P_Sub_produtos.Controls.Add(this.Btn_categoria);
             this.P_Sub_produtos.Controls.Add(this.Btn_entrada);
             this.P_Sub_produtos.Dock = System.Windows.Forms.DockStyle.Top;
@@ -113,6 +115,22 @@ namespace Loja
             this.P_Sub_produtos.Name = "P_Sub_produtos";
             this.P_Sub_produtos.Size = new System.Drawing.Size(245, 165);
             this.P_Sub_produtos.TabIndex = 4;
+            // 
+            // Btn_categoria
+            // 
+            this.Btn_categoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Btn_categoria.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_categoria.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Btn_categoria.FlatAppearance.BorderSize = 0;
+            this.Btn_categoria.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(103)))), ((int)(((byte)(32)))));
+            this.Btn_categoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_categoria.Location = new System.Drawing.Point(0, 46);
+            this.Btn_categoria.Name = "Btn_categoria";
+            this.Btn_categoria.Size = new System.Drawing.Size(245, 46);
+            this.Btn_categoria.TabIndex = 6;
+            this.Btn_categoria.Text = "Categoria";
+            this.Btn_categoria.UseVisualStyleBackColor = false;
+            this.Btn_categoria.Click += new System.EventHandler(this.Btn_categoria_Click);
             // 
             // Btn_entrada
             // 
@@ -236,21 +254,21 @@ namespace Loja
             this.PanelForms.Size = new System.Drawing.Size(943, 651);
             this.PanelForms.TabIndex = 2;
             // 
-            // Btn_categoria
+            // Btn_cadastrar_prod
             // 
-            this.Btn_categoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Btn_categoria.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Btn_categoria.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Btn_categoria.FlatAppearance.BorderSize = 0;
-            this.Btn_categoria.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(103)))), ((int)(((byte)(32)))));
-            this.Btn_categoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_categoria.Location = new System.Drawing.Point(0, 46);
-            this.Btn_categoria.Name = "Btn_categoria";
-            this.Btn_categoria.Size = new System.Drawing.Size(245, 46);
-            this.Btn_categoria.TabIndex = 6;
-            this.Btn_categoria.Text = "Categoria";
-            this.Btn_categoria.UseVisualStyleBackColor = false;
-            this.Btn_categoria.Click += new System.EventHandler(this.Btn_categoria_Click);
+            this.Btn_cadastrar_prod.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Btn_cadastrar_prod.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_cadastrar_prod.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Btn_cadastrar_prod.FlatAppearance.BorderSize = 0;
+            this.Btn_cadastrar_prod.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(103)))), ((int)(((byte)(32)))));
+            this.Btn_cadastrar_prod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_cadastrar_prod.Location = new System.Drawing.Point(0, 92);
+            this.Btn_cadastrar_prod.Name = "Btn_cadastrar_prod";
+            this.Btn_cadastrar_prod.Size = new System.Drawing.Size(245, 46);
+            this.Btn_cadastrar_prod.TabIndex = 7;
+            this.Btn_cadastrar_prod.Text = "Cadastrar Produtos";
+            this.Btn_cadastrar_prod.UseVisualStyleBackColor = false;
+            this.Btn_cadastrar_prod.Click += new System.EventHandler(this.Btn_cadastrar_prod_Click);
             // 
             // pictureBox1
             // 
@@ -352,6 +370,7 @@ namespace Loja
         private System.Windows.Forms.Button Btn_entrada;
         private System.Windows.Forms.Panel PanelForms;
         private System.Windows.Forms.Button Btn_categoria;
+        private System.Windows.Forms.Button Btn_cadastrar_prod;
     }
 }
 

@@ -1,6 +1,4 @@
-﻿using Loja.Business_Logic_Layer;
-using Loja.Data_Transfer_Object;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Loja
 {
@@ -26,31 +25,37 @@ namespace Loja
 
         private void Btn_cadastrar_Click(object sender, EventArgs e)
         {
-            Produtos_DTO categoria = new Produtos_DTO // adicionando valores do textbox no data transfer como maiusculas
-            {
-                Categoria = Txt_nome.Text.ToUpper(),
-                Descricao = Txt_descricao.Text.ToUpper()
-            };
-
             if(!string.IsNullOrEmpty(Txt_nome.Text)) // condicional para campo vazio
             {
                 try
                 {
-                    new Produtos_BLL().Categoria(categoria); //passando para o Business Logic Layer
+                    SqlConnection conexao = new SqlConnection
+                    {
+                        ConnectionString = Properties.Settings.Default.conexao
+                    };
+                    SqlCommand comando = new SqlCommand("SP_ADD_CATEGORIA", conexao)
+                    {
+                        CommandType = CommandType.StoredProcedure,
+                        Connection = conexao
+                    };
+                    comando.Parameters.Add("nome", SqlDbType.VarChar).Value = Txt_nome.Text.ToUpper();
+                    comando.Parameters.Add("descricao", SqlDbType.VarChar).Value = Txt_descricao.Text.ToUpper();
+
+                    conexao.Open();
+                    comando.ExecuteNonQuery();
+                    DialogResult dialog = MessageBox.Show("Categoria cadastrada !");
+                    conexao.Close();
+
+                    if (dialog == DialogResult.OK)
+                    {
+                        Txt_nome.Text = "";
+                        Txt_descricao.Text = "";
+                    }
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
-
-                DialogResult dialog = MessageBox.Show("Categoria cadastrada !");
-
-                if (dialog == DialogResult.OK)
-                {
-                    Txt_nome.Text = "";
-                    Txt_descricao.Text = "";
-                }
-
             }
             else
             {
