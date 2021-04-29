@@ -30,30 +30,32 @@ namespace Loja
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
             this.Btn_fechar_form = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.Cbo_categoria = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.Btn_cadastrar = new System.Windows.Forms.Button();
             this.Btn_foto = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pictureCircle1 = new Loja.PictureCircle();
+            this.Pic_foto = new Loja.PictureCircle();
+            this.label8 = new System.Windows.Forms.Label();
+            this.Txt_preco_venda = new System.Windows.Forms.TextBox();
+            this.Txt_porcentagem = new System.Windows.Forms.TextBox();
+            this.Txt_preco_custo = new System.Windows.Forms.TextBox();
+            this.Txt_descricao = new System.Windows.Forms.TextBox();
+            this.Txt_quantidade = new System.Windows.Forms.TextBox();
+            this.Cbo_categoria = new System.Windows.Forms.ComboBox();
+            this.Txt_nome = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.Txt_id_produto = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureCircle1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pic_foto)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -65,12 +67,28 @@ namespace Loja
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(5);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1107, 38);
             this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // Btn_fechar_form
+            // 
+            this.Btn_fechar_form.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_fechar_form.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Btn_fechar_form.FlatAppearance.BorderSize = 0;
+            this.Btn_fechar_form.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(103)))), ((int)(((byte)(32)))));
+            this.Btn_fechar_form.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_fechar_form.Image = global::Loja.Properties.Resources.excluir_cruz;
+            this.Btn_fechar_form.Location = new System.Drawing.Point(1078, 5);
+            this.Btn_fechar_form.Margin = new System.Windows.Forms.Padding(5);
+            this.Btn_fechar_form.Name = "Btn_fechar_form";
+            this.Btn_fechar_form.Size = new System.Drawing.Size(24, 28);
+            this.Btn_fechar_form.TabIndex = 2;
+            this.Btn_fechar_form.UseVisualStyleBackColor = true;
+            this.Btn_fechar_form.Click += new System.EventHandler(this.Btn_fechar_form_Click);
             // 
             // label1
             // 
@@ -85,45 +103,31 @@ namespace Loja
             this.label1.TabIndex = 0;
             this.label1.Text = "Cadastrar Produtos";
             // 
-            // Btn_fechar_form
-            // 
-            this.Btn_fechar_form.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Btn_fechar_form.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Btn_fechar_form.FlatAppearance.BorderSize = 0;
-            this.Btn_fechar_form.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(103)))), ((int)(((byte)(32)))));
-            this.Btn_fechar_form.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_fechar_form.Image = global::Loja.Properties.Resources.excluir_cruz;
-            this.Btn_fechar_form.Location = new System.Drawing.Point(1078, 5);
-            this.Btn_fechar_form.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.Btn_fechar_form.Name = "Btn_fechar_form";
-            this.Btn_fechar_form.Size = new System.Drawing.Size(24, 28);
-            this.Btn_fechar_form.TabIndex = 2;
-            this.Btn_fechar_form.UseVisualStyleBackColor = true;
-            this.Btn_fechar_form.Click += new System.EventHandler(this.Btn_fechar_form_Click);
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(103)))), ((int)(((byte)(32)))));
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 38);
-            this.panel1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel1.Margin = new System.Windows.Forms.Padding(5);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1107, 2);
             this.panel1.TabIndex = 1;
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.Txt_id_produto);
+            this.panel2.Controls.Add(this.label9);
+            this.panel2.Controls.Add(this.Btn_cadastrar);
             this.panel2.Controls.Add(this.Btn_foto);
-            this.panel2.Controls.Add(this.pictureCircle1);
+            this.panel2.Controls.Add(this.Pic_foto);
             this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.textBox6);
-            this.panel2.Controls.Add(this.textBox5);
-            this.panel2.Controls.Add(this.textBox4);
-            this.panel2.Controls.Add(this.textBox3);
-            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.Txt_preco_venda);
+            this.panel2.Controls.Add(this.Txt_porcentagem);
+            this.panel2.Controls.Add(this.Txt_preco_custo);
+            this.panel2.Controls.Add(this.Txt_descricao);
+            this.panel2.Controls.Add(this.Txt_quantidade);
             this.panel2.Controls.Add(this.Cbo_categoria);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.Txt_nome);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label5);
@@ -132,159 +136,26 @@ namespace Loja
             this.panel2.Controls.Add(this.label2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 40);
-            this.panel2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel2.Margin = new System.Windows.Forms.Padding(5);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1107, 562);
             this.panel2.TabIndex = 2;
             // 
-            // label2
+            // Btn_cadastrar
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(204, 51);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 23);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Nome:";
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(167, 196);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(108, 23);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Descrição:";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(164, 99);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(110, 23);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Categoria:";
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(147, 147);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(128, 23);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Quantidade:";
-            // 
-            // label6
-            // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(120, 299);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(155, 23);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "Preço de Custo:";
-            // 
-            // label7
-            // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(622, 375);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(165, 23);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "Preço de Venda:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(280, 48);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(327, 31);
-            this.textBox1.TabIndex = 6;
-            // 
-            // Cbo_categoria
-            // 
-            this.Cbo_categoria.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Cbo_categoria.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cbo_categoria.FormattingEnabled = true;
-            this.Cbo_categoria.Location = new System.Drawing.Point(281, 97);
-            this.Cbo_categoria.Name = "Cbo_categoria";
-            this.Cbo_categoria.Size = new System.Drawing.Size(193, 30);
-            this.Cbo_categoria.TabIndex = 7;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(281, 145);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(327, 31);
-            this.textBox2.TabIndex = 8;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(281, 194);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(640, 88);
-            this.textBox3.TabIndex = 9;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(281, 297);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(133, 31);
-            this.textBox4.TabIndex = 10;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(793, 297);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(128, 31);
-            this.textBox5.TabIndex = 11;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(793, 373);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(128, 31);
-            this.textBox6.TabIndex = 12;
-            // 
-            // label8
-            // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(646, 299);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(141, 23);
-            this.label8.TabIndex = 13;
-            this.label8.Text = "Porcentagem:";
+            this.Btn_cadastrar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Btn_cadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_cadastrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(103)))), ((int)(((byte)(32)))));
+            this.Btn_cadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_cadastrar.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_cadastrar.ForeColor = System.Drawing.Color.White;
+            this.Btn_cadastrar.Location = new System.Drawing.Point(745, 490);
+            this.Btn_cadastrar.Name = "Btn_cadastrar";
+            this.Btn_cadastrar.Size = new System.Drawing.Size(180, 51);
+            this.Btn_cadastrar.TabIndex = 16;
+            this.Btn_cadastrar.Text = "Cadastrar";
+            this.Btn_cadastrar.UseVisualStyleBackColor = true;
+            this.Btn_cadastrar.Click += new System.EventHandler(this.Btn_cadastrar_Click);
             // 
             // Btn_foto
             // 
@@ -293,37 +164,199 @@ namespace Loja
             this.Btn_foto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(103)))), ((int)(((byte)(32)))));
             this.Btn_foto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_foto.ForeColor = System.Drawing.Color.White;
-            this.Btn_foto.Location = new System.Drawing.Point(640, 91);
+            this.Btn_foto.Location = new System.Drawing.Point(644, 136);
             this.Btn_foto.Name = "Btn_foto";
             this.Btn_foto.Size = new System.Drawing.Size(115, 31);
             this.Btn_foto.TabIndex = 15;
             this.Btn_foto.Text = "Inserir foto";
             this.Btn_foto.UseVisualStyleBackColor = true;
+            this.Btn_foto.Click += new System.EventHandler(this.Btn_foto_Click);
             // 
-            // button1
+            // Pic_foto
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(103)))), ((int)(((byte)(32)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(741, 445);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(180, 51);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Cadastrar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.Pic_foto.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Pic_foto.BackColor = System.Drawing.Color.DimGray;
+            this.Pic_foto.Location = new System.Drawing.Point(765, 73);
+            this.Pic_foto.Name = "Pic_foto";
+            this.Pic_foto.Size = new System.Drawing.Size(160, 160);
+            this.Pic_foto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Pic_foto.TabIndex = 14;
+            this.Pic_foto.TabStop = false;
             // 
-            // pictureCircle1
+            // label8
             // 
-            this.pictureCircle1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureCircle1.BackColor = System.Drawing.Color.DimGray;
-            this.pictureCircle1.Location = new System.Drawing.Point(761, 28);
-            this.pictureCircle1.Name = "pictureCircle1";
-            this.pictureCircle1.Size = new System.Drawing.Size(160, 160);
-            this.pictureCircle1.TabIndex = 14;
-            this.pictureCircle1.TabStop = false;
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(650, 344);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(141, 23);
+            this.label8.TabIndex = 13;
+            this.label8.Text = "Porcentagem:";
+            // 
+            // Txt_preco_venda
+            // 
+            this.Txt_preco_venda.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Txt_preco_venda.Enabled = false;
+            this.Txt_preco_venda.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_preco_venda.Location = new System.Drawing.Point(797, 418);
+            this.Txt_preco_venda.Name = "Txt_preco_venda";
+            this.Txt_preco_venda.Size = new System.Drawing.Size(128, 31);
+            this.Txt_preco_venda.TabIndex = 12;
+            this.Txt_preco_venda.TextChanged += new System.EventHandler(this.Txt_preco_venda_TextChanged);
+            // 
+            // Txt_porcentagem
+            // 
+            this.Txt_porcentagem.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Txt_porcentagem.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_porcentagem.Location = new System.Drawing.Point(797, 342);
+            this.Txt_porcentagem.Name = "Txt_porcentagem";
+            this.Txt_porcentagem.Size = new System.Drawing.Size(128, 31);
+            this.Txt_porcentagem.TabIndex = 11;
+            this.Txt_porcentagem.TextChanged += new System.EventHandler(this.Txt_porcentagem_TextChanged);
+            // 
+            // Txt_preco_custo
+            // 
+            this.Txt_preco_custo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Txt_preco_custo.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_preco_custo.Location = new System.Drawing.Point(285, 342);
+            this.Txt_preco_custo.Name = "Txt_preco_custo";
+            this.Txt_preco_custo.Size = new System.Drawing.Size(133, 31);
+            this.Txt_preco_custo.TabIndex = 10;
+            this.Txt_preco_custo.TextChanged += new System.EventHandler(this.Txt_preco_custo_TextChanged);
+            // 
+            // Txt_descricao
+            // 
+            this.Txt_descricao.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Txt_descricao.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_descricao.Location = new System.Drawing.Point(285, 239);
+            this.Txt_descricao.Multiline = true;
+            this.Txt_descricao.Name = "Txt_descricao";
+            this.Txt_descricao.Size = new System.Drawing.Size(640, 88);
+            this.Txt_descricao.TabIndex = 9;
+            // 
+            // Txt_quantidade
+            // 
+            this.Txt_quantidade.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Txt_quantidade.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_quantidade.Location = new System.Drawing.Point(285, 190);
+            this.Txt_quantidade.Name = "Txt_quantidade";
+            this.Txt_quantidade.Size = new System.Drawing.Size(327, 31);
+            this.Txt_quantidade.TabIndex = 8;
+            // 
+            // Cbo_categoria
+            // 
+            this.Cbo_categoria.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Cbo_categoria.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cbo_categoria.FormattingEnabled = true;
+            this.Cbo_categoria.Location = new System.Drawing.Point(285, 142);
+            this.Cbo_categoria.Name = "Cbo_categoria";
+            this.Cbo_categoria.Size = new System.Drawing.Size(193, 30);
+            this.Cbo_categoria.TabIndex = 7;
+            this.Cbo_categoria.SelectedIndexChanged += new System.EventHandler(this.Cbo_categoria_SelectedIndexChanged);
+            // 
+            // Txt_nome
+            // 
+            this.Txt_nome.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Txt_nome.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_nome.Location = new System.Drawing.Point(284, 93);
+            this.Txt_nome.Name = "Txt_nome";
+            this.Txt_nome.Size = new System.Drawing.Size(327, 31);
+            this.Txt_nome.TabIndex = 6;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(626, 420);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(165, 23);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "Preço de Venda:";
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(124, 344);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(155, 23);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Preço de Custo:";
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(151, 192);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(128, 23);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Quantidade:";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(168, 144);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(110, 23);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Categoria:";
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(171, 241);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(108, 23);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Descrição:";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(208, 96);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(71, 23);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Nome:";
+            // 
+            // label9
+            // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(194, 49);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(85, 23);
+            this.label9.TabIndex = 17;
+            this.label9.Text = "Codigo:";
+            // 
+            // Txt_id_produto
+            // 
+            this.Txt_id_produto.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Txt_id_produto.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_id_produto.Location = new System.Drawing.Point(285, 47);
+            this.Txt_id_produto.Name = "Txt_id_produto";
+            this.Txt_id_produto.Size = new System.Drawing.Size(193, 31);
+            this.Txt_id_produto.TabIndex = 18;
             // 
             // Frm_cadastrar_produto
             // 
@@ -336,14 +369,14 @@ namespace Loja
             this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Frm_cadastrar_produto";
             this.Text = "Frm_cadastrar_produto";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureCircle1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pic_foto)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -362,15 +395,17 @@ namespace Loja
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button Btn_foto;
-        private PictureCircle pictureCircle1;
+        private PictureCircle Pic_foto;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox Txt_preco_venda;
+        private System.Windows.Forms.TextBox Txt_porcentagem;
+        private System.Windows.Forms.TextBox Txt_preco_custo;
+        private System.Windows.Forms.TextBox Txt_descricao;
+        private System.Windows.Forms.TextBox Txt_quantidade;
         private System.Windows.Forms.ComboBox Cbo_categoria;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox Txt_nome;
+        private System.Windows.Forms.Button Btn_cadastrar;
+        private System.Windows.Forms.TextBox Txt_id_produto;
+        private System.Windows.Forms.Label label9;
     }
 }
