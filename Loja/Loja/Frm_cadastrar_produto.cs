@@ -59,35 +59,42 @@ namespace Loja
 
         private void Cbo_categoria_SelectedIndexChanged(object sender, EventArgs e)
         {
-            try
+            if(Cbo_categoria.Text != "")
             {
-                SqlConnection conexao = new SqlConnection
+                try
                 {
-                    ConnectionString = Properties.Settings.Default.conexao
-                };
-
-                SqlCommand comando = new SqlCommand
-                {
-                    CommandType = CommandType.Text,
-                    CommandText = "SELECT id FROM Categoria where nome = @nome",
-                    Connection = conexao
-                };
-                conexao.Open();
-                comando.Parameters.Add("@nome", SqlDbType.VarChar).Value = Cbo_categoria.Text;
-                SqlDataReader DR = comando.ExecuteReader();
-
-                if (DR.HasRows)
-                {
-                    while (DR.Read())
+                    SqlConnection conexao = new SqlConnection
                     {
-                        id_categoria = Convert.ToInt32(DR["id"]);
+                        ConnectionString = Properties.Settings.Default.conexao
+                    };
+
+                    SqlCommand comando = new SqlCommand
+                    {
+                        CommandType = CommandType.Text,
+                        CommandText = "SELECT id FROM Categoria where nome = @nome",
+                        Connection = conexao
+                    };
+                    conexao.Open();
+                    comando.Parameters.Add("@nome", SqlDbType.VarChar).Value = Cbo_categoria.Text;
+                    SqlDataReader DR = comando.ExecuteReader();
+
+                    if (DR.HasRows)
+                    {
+                        while (DR.Read())
+                        {
+                            id_categoria = Convert.ToInt32(DR["id"]);
+                        }
                     }
+                    conexao.Close();
                 }
-                conexao.Close();
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Selecione uma categoria !");
             }
         }
 
@@ -99,7 +106,7 @@ namespace Loja
         private void Btn_foto_Click(object sender, EventArgs e)
         {
             OpenFileDialog message = new OpenFileDialog();
-            message.Filter = "Image File(*.jpeg; *.png) | *.jpeg; *.png;";
+            message.Filter = "Image File(*.jpg; *.jpeg; *.png) | *.jpg; *.jpeg; *.png;";
             if (message.ShowDialog() == DialogResult.OK)
             {
                 local = message.FileName.ToString();
@@ -109,32 +116,50 @@ namespace Loja
 
         private void Btn_cadastrar_Click(object sender, EventArgs e)
         {
-            SqlConnection conexao = new SqlConnection();
-            conexao.ConnectionString = Properties.Settings.Default.conexao;
-
-            SqlCommand comando = new SqlCommand("SP_CAD_PRODUTOS", conexao);
-            comando.CommandType = CommandType.StoredProcedure;
-            comando.Connection = conexao;
-            conexao.Open();
-            try
+            if((Txt_nome.Text != "") && (Txt_preco_custo.Text != "") && (Txt_preco_venda.Text != "") && (Cbo_categoria.Items != null))
             {
-                //comando.Parameters.AddWithValue("@id_produto", Txt_id_produto.Text);
-                comando.Parameters.AddWithValue("@nome", Txt_nome.Text.ToUpper());
-                comando.Parameters.AddWithValue("id_categoria", id_categoria);
-                comando.Parameters.AddWithValue("imagem", (byte[])(new ImageConverter().ConvertTo(Pic_foto.Image, typeof(byte[]))));
-                comando.Parameters.AddWithValue("@descricao", Txt_descricao.Text.ToUpper());
-                comando.Parameters.AddWithValue("@quantidade", Txt_quantidade.Text);
-                comando.Parameters.AddWithValue("@custo", Txt_preco_custo.Text);
-                comando.Parameters.AddWithValue("@venda", Txt_preco_venda.Text);
+                SqlConnection conexao = new SqlConnection();
+                conexao.ConnectionString = Properties.Settings.Default.conexao;
 
-                comando.ExecuteNonQuery();
-                conexao.Close();
+                SqlCommand comando = new SqlCommand("SP_CAD_PRODUTOS", conexao);
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Connection = conexao;
+                conexao.Open();
+                try
+                {
+                    comando.Parameters.AddWithValue("@nome", Txt_nome.Text.ToUpper());
+                    comando.Parameters.AddWithValue("id_categoria", id_categoria);
+                    comando.Parameters.AddWithValue("imagem", (byte[])(new ImageConverter().ConvertTo(Pic_foto.Image, typeof(byte[]))));
+                    comando.Parameters.AddWithValue("@descricao", Txt_descricao.Text.ToUpper());
+                    comando.Parameters.AddWithValue("@quantidade", Txt_quantidade.Text);
+                    comando.Parameters.Add("@custo", SqlDbType.Decimal).Value = Txt_preco_custo.Text;
+                    comando.Parameters.Add("@venda", SqlDbType.Decimal).Value = Txt_preco_venda.Text;
+
+                    comando.ExecuteNonQuery();
+                    conexao.Close();
+
+                    DialogResult dialog = MessageBox.Show("Produto Cadastrado com Sucesso !");
+
+                    if (dialog == DialogResult.OK)
+                    {
+                        Txt_nome.Text = "";
+                        Txt_quantidade.Text = "";
+                        Txt_descricao.Text = "";
+                        Txt_preco_custo.Text = "";
+                        Txt_porcentagem.Text = "";
+                        Txt_preco_venda.Text = "";
+                        Pic_foto.Image = null;
+                    }
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
-            catch (SqlException ex)
+            else
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Preencha os campos Obrigatórios ! 'Nome:' 'Categoria:' 'Preço de Custo:' 'Preço de Venda:' ");
             }
-            
         }
 
         private void Txt_preco_venda_TextChanged(object sender, EventArgs e)
