@@ -109,7 +109,7 @@ namespace Loja
             // 
             // Btn_cadastrar
             // 
-            this.Btn_cadastrar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Btn_cadastrar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Btn_cadastrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(103)))), ((int)(((byte)(32)))));
             this.Btn_cadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_cadastrar.ForeColor = System.Drawing.Color.White;
@@ -123,7 +123,7 @@ namespace Loja
             // 
             // Txt_descricao
             // 
-            this.Txt_descricao.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Txt_descricao.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Txt_descricao.Location = new System.Drawing.Point(335, 171);
             this.Txt_descricao.Multiline = true;
             this.Txt_descricao.Name = "Txt_descricao";
@@ -132,7 +132,7 @@ namespace Loja
             // 
             // Txt_nome
             // 
-            this.Txt_nome.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Txt_nome.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Txt_nome.Location = new System.Drawing.Point(335, 111);
             this.Txt_nome.Name = "Txt_nome";
             this.Txt_nome.Size = new System.Drawing.Size(354, 31);
@@ -140,7 +140,7 @@ namespace Loja
             // 
             // label3
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(228, 174);
@@ -151,7 +151,7 @@ namespace Loja
             // 
             // label2
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(129, 114);

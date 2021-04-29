@@ -32,8 +32,12 @@ namespace Loja
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Menu));
             this.Tlp_mover = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
+            this.Btn_Exit = new System.Windows.Forms.Button();
+            this.Btn_Max_Min = new System.Windows.Forms.Button();
+            this.Btn_minimizar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.P_Sub_produtos = new System.Windows.Forms.Panel();
+            this.Btn_cadastrar_prod = new System.Windows.Forms.Button();
             this.Btn_categoria = new System.Windows.Forms.Button();
             this.Btn_entrada = new System.Windows.Forms.Button();
             this.Btn_Produtos = new System.Windows.Forms.Button();
@@ -43,12 +47,8 @@ namespace Loja
             this.Btn_venda = new System.Windows.Forms.Button();
             this.Btn_caixa = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.PanelForms = new System.Windows.Forms.Panel();
-            this.Btn_cadastrar_prod = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Btn_Exit = new System.Windows.Forms.Button();
-            this.Btn_Max_Min = new System.Windows.Forms.Button();
-            this.Btn_minimizar = new System.Windows.Forms.Button();
+            this.PanelForms = new System.Windows.Forms.Panel();
             this.Tlp_mover.SuspendLayout();
             this.panel1.SuspendLayout();
             this.P_Sub_produtos.SuspendLayout();
@@ -74,7 +74,7 @@ namespace Loja
             this.Tlp_mover.Name = "Tlp_mover";
             this.Tlp_mover.RowCount = 1;
             this.Tlp_mover.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.Tlp_mover.Size = new System.Drawing.Size(1188, 28);
+            this.Tlp_mover.Size = new System.Drawing.Size(1278, 28);
             this.Tlp_mover.TabIndex = 0;
             this.Tlp_mover.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Tlp_mover_MouseDown);
             this.Tlp_mover.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Tlp_mover_MouseMove);
@@ -91,6 +91,48 @@ namespace Loja
             this.label1.TabIndex = 0;
             this.label1.Text = "Pagolinha";
             // 
+            // Btn_Exit
+            // 
+            this.Btn_Exit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_Exit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Btn_Exit.FlatAppearance.BorderSize = 0;
+            this.Btn_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Exit.Image = global::Loja.Properties.Resources.excluir_cruz;
+            this.Btn_Exit.Location = new System.Drawing.Point(1241, 3);
+            this.Btn_Exit.Name = "Btn_Exit";
+            this.Btn_Exit.Size = new System.Drawing.Size(34, 22);
+            this.Btn_Exit.TabIndex = 1;
+            this.Btn_Exit.UseVisualStyleBackColor = true;
+            this.Btn_Exit.Click += new System.EventHandler(this.Btn_Exit_Click);
+            // 
+            // Btn_Max_Min
+            // 
+            this.Btn_Max_Min.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_Max_Min.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Btn_Max_Min.FlatAppearance.BorderSize = 0;
+            this.Btn_Max_Min.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Max_Min.Image = global::Loja.Properties.Resources.maximizar;
+            this.Btn_Max_Min.Location = new System.Drawing.Point(1203, 3);
+            this.Btn_Max_Min.Name = "Btn_Max_Min";
+            this.Btn_Max_Min.Size = new System.Drawing.Size(32, 22);
+            this.Btn_Max_Min.TabIndex = 2;
+            this.Btn_Max_Min.UseVisualStyleBackColor = true;
+            this.Btn_Max_Min.Click += new System.EventHandler(this.Btn_Max_Min_Click);
+            // 
+            // Btn_minimizar
+            // 
+            this.Btn_minimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_minimizar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Btn_minimizar.FlatAppearance.BorderSize = 0;
+            this.Btn_minimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_minimizar.Image = global::Loja.Properties.Resources.botao_minimizar;
+            this.Btn_minimizar.Location = new System.Drawing.Point(1165, 3);
+            this.Btn_minimizar.Name = "Btn_minimizar";
+            this.Btn_minimizar.Size = new System.Drawing.Size(32, 22);
+            this.Btn_minimizar.TabIndex = 3;
+            this.Btn_minimizar.UseVisualStyleBackColor = true;
+            this.Btn_minimizar.Click += new System.EventHandler(this.Btn_minimizar_Click);
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
@@ -102,7 +144,7 @@ namespace Loja
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 28);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(245, 651);
+            this.panel1.Size = new System.Drawing.Size(245, 691);
             this.panel1.TabIndex = 1;
             // 
             // P_Sub_produtos
@@ -115,6 +157,22 @@ namespace Loja
             this.P_Sub_produtos.Name = "P_Sub_produtos";
             this.P_Sub_produtos.Size = new System.Drawing.Size(245, 165);
             this.P_Sub_produtos.TabIndex = 4;
+            // 
+            // Btn_cadastrar_prod
+            // 
+            this.Btn_cadastrar_prod.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Btn_cadastrar_prod.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_cadastrar_prod.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Btn_cadastrar_prod.FlatAppearance.BorderSize = 0;
+            this.Btn_cadastrar_prod.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(103)))), ((int)(((byte)(32)))));
+            this.Btn_cadastrar_prod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_cadastrar_prod.Location = new System.Drawing.Point(0, 92);
+            this.Btn_cadastrar_prod.Name = "Btn_cadastrar_prod";
+            this.Btn_cadastrar_prod.Size = new System.Drawing.Size(245, 46);
+            this.Btn_cadastrar_prod.TabIndex = 7;
+            this.Btn_cadastrar_prod.Text = "Cadastrar Produtos";
+            this.Btn_cadastrar_prod.UseVisualStyleBackColor = false;
+            this.Btn_cadastrar_prod.Click += new System.EventHandler(this.Btn_cadastrar_prod_Click);
             // 
             // Btn_categoria
             // 
@@ -246,30 +304,6 @@ namespace Loja
             this.panel2.Size = new System.Drawing.Size(245, 110);
             this.panel2.TabIndex = 0;
             // 
-            // PanelForms
-            // 
-            this.PanelForms.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelForms.Location = new System.Drawing.Point(245, 28);
-            this.PanelForms.Name = "PanelForms";
-            this.PanelForms.Size = new System.Drawing.Size(943, 651);
-            this.PanelForms.TabIndex = 2;
-            // 
-            // Btn_cadastrar_prod
-            // 
-            this.Btn_cadastrar_prod.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Btn_cadastrar_prod.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Btn_cadastrar_prod.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Btn_cadastrar_prod.FlatAppearance.BorderSize = 0;
-            this.Btn_cadastrar_prod.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(103)))), ((int)(((byte)(32)))));
-            this.Btn_cadastrar_prod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_cadastrar_prod.Location = new System.Drawing.Point(0, 92);
-            this.Btn_cadastrar_prod.Name = "Btn_cadastrar_prod";
-            this.Btn_cadastrar_prod.Size = new System.Drawing.Size(245, 46);
-            this.Btn_cadastrar_prod.TabIndex = 7;
-            this.Btn_cadastrar_prod.Text = "Cadastrar Produtos";
-            this.Btn_cadastrar_prod.UseVisualStyleBackColor = false;
-            this.Btn_cadastrar_prod.Click += new System.EventHandler(this.Btn_cadastrar_prod_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Loja.Properties.Resources.Loja_Pagolinha_Logo_Branco_completo;
@@ -280,54 +314,20 @@ namespace Loja
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // Btn_Exit
+            // PanelForms
             // 
-            this.Btn_Exit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Btn_Exit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Btn_Exit.FlatAppearance.BorderSize = 0;
-            this.Btn_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Exit.Image = global::Loja.Properties.Resources.excluir_cruz;
-            this.Btn_Exit.Location = new System.Drawing.Point(1154, 3);
-            this.Btn_Exit.Name = "Btn_Exit";
-            this.Btn_Exit.Size = new System.Drawing.Size(31, 22);
-            this.Btn_Exit.TabIndex = 1;
-            this.Btn_Exit.UseVisualStyleBackColor = true;
-            this.Btn_Exit.Click += new System.EventHandler(this.Btn_Exit_Click);
-            // 
-            // Btn_Max_Min
-            // 
-            this.Btn_Max_Min.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Btn_Max_Min.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Btn_Max_Min.FlatAppearance.BorderSize = 0;
-            this.Btn_Max_Min.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Max_Min.Image = global::Loja.Properties.Resources.maximizar;
-            this.Btn_Max_Min.Location = new System.Drawing.Point(1119, 3);
-            this.Btn_Max_Min.Name = "Btn_Max_Min";
-            this.Btn_Max_Min.Size = new System.Drawing.Size(29, 22);
-            this.Btn_Max_Min.TabIndex = 2;
-            this.Btn_Max_Min.UseVisualStyleBackColor = true;
-            this.Btn_Max_Min.Click += new System.EventHandler(this.Btn_Max_Min_Click);
-            // 
-            // Btn_minimizar
-            // 
-            this.Btn_minimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Btn_minimizar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Btn_minimizar.FlatAppearance.BorderSize = 0;
-            this.Btn_minimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_minimizar.Image = global::Loja.Properties.Resources.botao_minimizar;
-            this.Btn_minimizar.Location = new System.Drawing.Point(1084, 3);
-            this.Btn_minimizar.Name = "Btn_minimizar";
-            this.Btn_minimizar.Size = new System.Drawing.Size(29, 22);
-            this.Btn_minimizar.TabIndex = 3;
-            this.Btn_minimizar.UseVisualStyleBackColor = true;
-            this.Btn_minimizar.Click += new System.EventHandler(this.Btn_minimizar_Click);
+            this.PanelForms.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelForms.Location = new System.Drawing.Point(245, 28);
+            this.PanelForms.Name = "PanelForms";
+            this.PanelForms.Size = new System.Drawing.Size(1033, 691);
+            this.PanelForms.TabIndex = 2;
             // 
             // Frm_Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1188, 679);
+            this.ClientSize = new System.Drawing.Size(1278, 719);
             this.Controls.Add(this.PanelForms);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Tlp_mover);

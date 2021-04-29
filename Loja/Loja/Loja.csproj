@@ -73,9 +73,16 @@
     <Compile Include="Frm_Menu.Designer.cs">
       <DependentUpon>Frm_Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_pesquisar_produto%28entrada%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_pesquisar_produto%28entrada%29.Designer.cs">
+      <DependentUpon>Frm_pesquisar_produto%28entrada%29.cs</DependentUpon>
+    </Compile>
     <Compile Include="PictureCircle.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Produtos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Frm_cadastrar_produto.resx">
@@ -89,6 +96,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Menu.resx">
       <DependentUpon>Frm_Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_pesquisar_produto%28entrada%29.resx">
+      <DependentUpon>Frm_pesquisar_produto%28entrada%29.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -129,9 +139,8 @@
     <None Include="Resources\Loja Pagolinha Logo Branco completo.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Loja Pagolinha favicon.ico" />
     <Content Include="Loja Pagolinha favicon1.ico" />
-    <Content Include="Loja Pagolinha Logo.ico" />
+    <None Include="Resources\simbolo-de-interface-de-foto-de-pesquisa-com-ferramenta-de-lupa.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

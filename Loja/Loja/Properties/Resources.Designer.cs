@@ -109,5 +109,15 @@ namespace Loja.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap simbolo_de_interface_de_foto_de_pesquisa_com_ferramenta_de_lupa {
+            get {
+                object obj = ResourceManager.GetObject("simbolo-de-interface-de-foto-de-pesquisa-com-ferramenta-de-lupa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

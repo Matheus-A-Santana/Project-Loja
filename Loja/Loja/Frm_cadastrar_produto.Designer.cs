@@ -36,6 +36,7 @@ namespace Loja
             this.panel2 = new System.Windows.Forms.Panel();
             this.Btn_cadastrar = new System.Windows.Forms.Button();
             this.Btn_foto = new System.Windows.Forms.Button();
+            this.Pic_foto = new Loja.PictureCircle();
             this.label8 = new System.Windows.Forms.Label();
             this.Txt_preco_venda = new System.Windows.Forms.TextBox();
             this.Txt_porcentagem = new System.Windows.Forms.TextBox();
@@ -50,7 +51,6 @@ namespace Loja
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.Pic_foto = new Loja.PictureCircle();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Pic_foto)).BeginInit();
@@ -139,7 +139,7 @@ namespace Loja
             // 
             // Btn_cadastrar
             // 
-            this.Btn_cadastrar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Btn_cadastrar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Btn_cadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Btn_cadastrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(103)))), ((int)(((byte)(32)))));
             this.Btn_cadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -155,7 +155,7 @@ namespace Loja
             // 
             // Btn_foto
             // 
-            this.Btn_foto.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Btn_foto.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Btn_foto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Btn_foto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(103)))), ((int)(((byte)(32)))));
             this.Btn_foto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -168,9 +168,20 @@ namespace Loja
             this.Btn_foto.UseVisualStyleBackColor = true;
             this.Btn_foto.Click += new System.EventHandler(this.Btn_foto_Click);
             // 
+            // Pic_foto
+            // 
+            this.Pic_foto.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Pic_foto.BackColor = System.Drawing.Color.DimGray;
+            this.Pic_foto.Location = new System.Drawing.Point(802, 62);
+            this.Pic_foto.Name = "Pic_foto";
+            this.Pic_foto.Size = new System.Drawing.Size(160, 160);
+            this.Pic_foto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Pic_foto.TabIndex = 14;
+            this.Pic_foto.TabStop = false;
+            // 
             // label8
             // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
@@ -182,7 +193,7 @@ namespace Loja
             // 
             // Txt_preco_venda
             // 
-            this.Txt_preco_venda.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Txt_preco_venda.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Txt_preco_venda.Enabled = false;
             this.Txt_preco_venda.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_preco_venda.Location = new System.Drawing.Point(834, 407);
@@ -193,7 +204,7 @@ namespace Loja
             // 
             // Txt_porcentagem
             // 
-            this.Txt_porcentagem.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Txt_porcentagem.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Txt_porcentagem.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_porcentagem.Location = new System.Drawing.Point(834, 331);
             this.Txt_porcentagem.Name = "Txt_porcentagem";
@@ -203,7 +214,7 @@ namespace Loja
             // 
             // Txt_preco_custo
             // 
-            this.Txt_preco_custo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Txt_preco_custo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Txt_preco_custo.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_preco_custo.Location = new System.Drawing.Point(322, 331);
             this.Txt_preco_custo.Name = "Txt_preco_custo";
@@ -213,7 +224,7 @@ namespace Loja
             // 
             // Txt_descricao
             // 
-            this.Txt_descricao.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Txt_descricao.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Txt_descricao.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_descricao.Location = new System.Drawing.Point(322, 228);
             this.Txt_descricao.Multiline = true;
@@ -223,7 +234,7 @@ namespace Loja
             // 
             // Txt_quantidade
             // 
-            this.Txt_quantidade.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Txt_quantidade.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Txt_quantidade.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_quantidade.Location = new System.Drawing.Point(322, 179);
             this.Txt_quantidade.Name = "Txt_quantidade";
@@ -232,7 +243,7 @@ namespace Loja
             // 
             // Cbo_categoria
             // 
-            this.Cbo_categoria.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Cbo_categoria.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Cbo_categoria.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cbo_categoria.FormattingEnabled = true;
             this.Cbo_categoria.Location = new System.Drawing.Point(322, 131);
@@ -243,7 +254,7 @@ namespace Loja
             // 
             // Txt_nome
             // 
-            this.Txt_nome.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Txt_nome.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Txt_nome.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_nome.Location = new System.Drawing.Point(321, 82);
             this.Txt_nome.Name = "Txt_nome";
@@ -252,7 +263,7 @@ namespace Loja
             // 
             // label7
             // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
@@ -264,7 +275,7 @@ namespace Loja
             // 
             // label6
             // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
@@ -276,7 +287,7 @@ namespace Loja
             // 
             // label5
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
@@ -288,7 +299,7 @@ namespace Loja
             // 
             // label4
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
@@ -300,7 +311,7 @@ namespace Loja
             // 
             // label3
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
@@ -312,7 +323,7 @@ namespace Loja
             // 
             // label2
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
@@ -321,17 +332,6 @@ namespace Loja
             this.label2.Size = new System.Drawing.Size(84, 23);
             this.label2.TabIndex = 0;
             this.label2.Text = "Nome: *";
-            // 
-            // Pic_foto
-            // 
-            this.Pic_foto.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Pic_foto.BackColor = System.Drawing.Color.DimGray;
-            this.Pic_foto.Location = new System.Drawing.Point(802, 62);
-            this.Pic_foto.Name = "Pic_foto";
-            this.Pic_foto.Size = new System.Drawing.Size(160, 160);
-            this.Pic_foto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Pic_foto.TabIndex = 14;
-            this.Pic_foto.TabStop = false;
             // 
             // Frm_cadastrar_produto
             // 
