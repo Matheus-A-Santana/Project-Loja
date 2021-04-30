@@ -149,14 +149,14 @@ namespace Loja
                 { 
                     //lancamento de entrada
                     comando.Parameters.Add("@quantidade", SqlDbType.Int).Value = Txt_qtd_compra.Text;
-                    comando.Parameters.Add("@custo", SqlDbType.Money).Value = Txt_custo_produto.Text;
-                    comando.Parameters.Add("@valor_total", SqlDbType.Money).Value = Txt_vlr_total_nota.Text;
+                    comando.Parameters.Add("@custo", SqlDbType.Decimal).Value = Txt_custo_produto.Text;
+                    comando.Parameters.Add("@valor_total", SqlDbType.Decimal).Value = Txt_vlr_total_nota.Text;
                     comando.Parameters.Add("@id_produto", SqlDbType.Int).Value = Lbl_id.Text;
                     comando.Parameters.Add("@data", SqlDbType.DateTime).Value = Lbl_data_lancamento.Text;
 
                     //Atualiando estoque
                     comando.Parameters.Add("@quantidade_total", SqlDbType.Int).Value = Txt_novo_estoque.Text;
-                    comando.Parameters.Add("@venda", SqlDbType.Money).Value = Txt_venda_produto.Text;
+                    comando.Parameters.Add("@venda", SqlDbType.Decimal).Value = Txt_venda_produto.Text;
 
                     int i = comando.ExecuteNonQuery();
                     conexao.Close();
