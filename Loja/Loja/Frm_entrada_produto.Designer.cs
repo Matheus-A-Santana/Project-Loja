@@ -47,17 +47,19 @@ namespace Loja
             this.label11 = new System.Windows.Forms.Label();
             this.Btn_lancar_entrada = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.Lbl_id = new System.Windows.Forms.Label();
+            this.Txt_novo_estoque = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.Btn_abrir_pesquisar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Txt_vlr_total_nota = new System.Windows.Forms.TextBox();
+            this.Txt_venda_produto = new System.Windows.Forms.TextBox();
+            this.Txt_Porc_venda = new System.Windows.Forms.TextBox();
+            this.Txt_custo_produto = new System.Windows.Forms.TextBox();
+            this.Txt_qtd_compra = new System.Windows.Forms.TextBox();
+            this.Txt_qtd_estoque = new System.Windows.Forms.TextBox();
+            this.Txt_descricao_produto = new System.Windows.Forms.TextBox();
+            this.Cbo_categoria_produto = new System.Windows.Forms.ComboBox();
+            this.Txt_nome_produto = new System.Windows.Forms.TextBox();
             this.pictureCircle1 = new Loja.PictureCircle();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel1.SuspendLayout();
@@ -215,12 +217,12 @@ namespace Loja
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(602, 462);
+            this.label8.Location = new System.Drawing.Point(683, 462);
             this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(194, 23);
+            this.label8.Size = new System.Drawing.Size(113, 23);
             this.label8.TabIndex = 10;
-            this.label8.Text = "Valor Total da Nota:";
+            this.label8.Text = "Valor Total:";
             // 
             // label9
             // 
@@ -275,20 +277,23 @@ namespace Loja
             this.Btn_lancar_entrada.TabIndex = 14;
             this.Btn_lancar_entrada.Text = "Lançar Entrada";
             this.Btn_lancar_entrada.UseVisualStyleBackColor = true;
+            this.Btn_lancar_entrada.Click += new System.EventHandler(this.Btn_lancar_entrada_Click);
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.Lbl_id);
+            this.panel3.Controls.Add(this.Txt_novo_estoque);
+            this.panel3.Controls.Add(this.label10);
             this.panel3.Controls.Add(this.Btn_abrir_pesquisar);
-            this.panel3.Controls.Add(this.button1);
-            this.panel3.Controls.Add(this.textBox8);
-            this.panel3.Controls.Add(this.textBox7);
-            this.panel3.Controls.Add(this.textBox6);
-            this.panel3.Controls.Add(this.textBox5);
-            this.panel3.Controls.Add(this.textBox4);
-            this.panel3.Controls.Add(this.textBox3);
-            this.panel3.Controls.Add(this.textBox2);
-            this.panel3.Controls.Add(this.comboBox1);
-            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.Txt_vlr_total_nota);
+            this.panel3.Controls.Add(this.Txt_venda_produto);
+            this.panel3.Controls.Add(this.Txt_Porc_venda);
+            this.panel3.Controls.Add(this.Txt_custo_produto);
+            this.panel3.Controls.Add(this.Txt_qtd_compra);
+            this.panel3.Controls.Add(this.Txt_qtd_estoque);
+            this.panel3.Controls.Add(this.Txt_descricao_produto);
+            this.panel3.Controls.Add(this.Cbo_categoria_produto);
+            this.panel3.Controls.Add(this.Txt_nome_produto);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.Lbl_data_lancamento);
             this.panel3.Controls.Add(this.Btn_lancar_entrada);
@@ -308,6 +313,41 @@ namespace Loja
             this.panel3.Size = new System.Drawing.Size(1224, 638);
             this.panel3.TabIndex = 15;
             // 
+            // Lbl_id
+            // 
+            this.Lbl_id.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Lbl_id.AutoSize = true;
+            this.Lbl_id.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_id.ForeColor = System.Drawing.Color.Black;
+            this.Lbl_id.Location = new System.Drawing.Point(370, 23);
+            this.Lbl_id.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.Lbl_id.Name = "Lbl_id";
+            this.Lbl_id.Size = new System.Drawing.Size(33, 23);
+            this.Lbl_id.TabIndex = 28;
+            this.Lbl_id.Text = "Id:";
+            // 
+            // Txt_novo_estoque
+            // 
+            this.Txt_novo_estoque.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Txt_novo_estoque.Enabled = false;
+            this.Txt_novo_estoque.Location = new System.Drawing.Point(804, 315);
+            this.Txt_novo_estoque.Name = "Txt_novo_estoque";
+            this.Txt_novo_estoque.Size = new System.Drawing.Size(184, 31);
+            this.Txt_novo_estoque.TabIndex = 27;
+            // 
+            // label10
+            // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(655, 317);
+            this.label10.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(141, 23);
+            this.label10.TabIndex = 26;
+            this.label10.Text = "Novo Estoque:";
+            // 
             // Btn_abrir_pesquisar
             // 
             this.Btn_abrir_pesquisar.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -325,94 +365,88 @@ namespace Loja
             this.Btn_abrir_pesquisar.UseVisualStyleBackColor = true;
             this.Btn_abrir_pesquisar.Click += new System.EventHandler(this.Btn_abrir_pesquisar_Click);
             // 
-            // button1
+            // Txt_vlr_total_nota
             // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(103)))), ((int)(((byte)(32)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(763, 51);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(33, 31);
-            this.button1.TabIndex = 24;
-            this.button1.UseVisualStyleBackColor = true;
+            this.Txt_vlr_total_nota.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Txt_vlr_total_nota.Location = new System.Drawing.Point(804, 460);
+            this.Txt_vlr_total_nota.Name = "Txt_vlr_total_nota";
+            this.Txt_vlr_total_nota.Size = new System.Drawing.Size(188, 31);
+            this.Txt_vlr_total_nota.TabIndex = 23;
             // 
-            // textBox8
+            // Txt_venda_produto
             // 
-            this.textBox8.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox8.Location = new System.Drawing.Point(804, 460);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(188, 31);
-            this.textBox8.TabIndex = 23;
+            this.Txt_venda_produto.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Txt_venda_produto.Location = new System.Drawing.Point(374, 460);
+            this.Txt_venda_produto.Name = "Txt_venda_produto";
+            this.Txt_venda_produto.Size = new System.Drawing.Size(184, 31);
+            this.Txt_venda_produto.TabIndex = 22;
+            this.Txt_venda_produto.TextChanged += new System.EventHandler(this.Txt_venda_produto_TextChanged);
             // 
-            // textBox7
+            // Txt_Porc_venda
             // 
-            this.textBox7.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox7.Location = new System.Drawing.Point(374, 460);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(184, 31);
-            this.textBox7.TabIndex = 22;
+            this.Txt_Porc_venda.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Txt_Porc_venda.Location = new System.Drawing.Point(804, 386);
+            this.Txt_Porc_venda.Name = "Txt_Porc_venda";
+            this.Txt_Porc_venda.Size = new System.Drawing.Size(188, 31);
+            this.Txt_Porc_venda.TabIndex = 21;
+            this.Txt_Porc_venda.TextChanged += new System.EventHandler(this.Txt_Porc_venda_TextChanged);
             // 
-            // textBox6
+            // Txt_custo_produto
             // 
-            this.textBox6.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox6.Location = new System.Drawing.Point(804, 386);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(188, 31);
-            this.textBox6.TabIndex = 21;
+            this.Txt_custo_produto.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Txt_custo_produto.Location = new System.Drawing.Point(374, 386);
+            this.Txt_custo_produto.Name = "Txt_custo_produto";
+            this.Txt_custo_produto.Size = new System.Drawing.Size(184, 31);
+            this.Txt_custo_produto.TabIndex = 20;
+            this.Txt_custo_produto.TextChanged += new System.EventHandler(this.Txt_custo_produto_TextChanged);
             // 
-            // textBox5
+            // Txt_qtd_compra
             // 
-            this.textBox5.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox5.Location = new System.Drawing.Point(374, 386);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(184, 31);
-            this.textBox5.TabIndex = 20;
+            this.Txt_qtd_compra.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Txt_qtd_compra.Location = new System.Drawing.Point(374, 315);
+            this.Txt_qtd_compra.Name = "Txt_qtd_compra";
+            this.Txt_qtd_compra.Size = new System.Drawing.Size(184, 31);
+            this.Txt_qtd_compra.TabIndex = 19;
+            this.Txt_qtd_compra.TextChanged += new System.EventHandler(this.Txt_qtd_compra_TextChanged);
             // 
-            // textBox4
+            // Txt_qtd_estoque
             // 
-            this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox4.Location = new System.Drawing.Point(374, 315);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(184, 31);
-            this.textBox4.TabIndex = 19;
+            this.Txt_qtd_estoque.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Txt_qtd_estoque.Enabled = false;
+            this.Txt_qtd_estoque.Location = new System.Drawing.Point(374, 243);
+            this.Txt_qtd_estoque.Name = "Txt_qtd_estoque";
+            this.Txt_qtd_estoque.Size = new System.Drawing.Size(73, 31);
+            this.Txt_qtd_estoque.TabIndex = 18;
             // 
-            // textBox3
+            // Txt_descricao_produto
             // 
-            this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox3.Enabled = false;
-            this.textBox3.Location = new System.Drawing.Point(374, 243);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(73, 31);
-            this.textBox3.TabIndex = 18;
+            this.Txt_descricao_produto.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Txt_descricao_produto.Enabled = false;
+            this.Txt_descricao_produto.Location = new System.Drawing.Point(374, 143);
+            this.Txt_descricao_produto.Multiline = true;
+            this.Txt_descricao_produto.Name = "Txt_descricao_produto";
+            this.Txt_descricao_produto.Size = new System.Drawing.Size(422, 92);
+            this.Txt_descricao_produto.TabIndex = 17;
             // 
-            // textBox2
+            // Cbo_categoria_produto
             // 
-            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(374, 143);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(422, 92);
-            this.textBox2.TabIndex = 17;
+            this.Cbo_categoria_produto.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Cbo_categoria_produto.Enabled = false;
+            this.Cbo_categoria_produto.FormattingEnabled = true;
+            this.Cbo_categoria_produto.Location = new System.Drawing.Point(374, 95);
+            this.Cbo_categoria_produto.Name = "Cbo_categoria_produto";
+            this.Cbo_categoria_produto.Size = new System.Drawing.Size(231, 30);
+            this.Cbo_categoria_produto.TabIndex = 16;
             // 
-            // comboBox1
+            // Txt_nome_produto
             // 
-            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.comboBox1.Enabled = false;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(374, 95);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(231, 30);
-            this.comboBox1.TabIndex = 16;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(374, 51);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(378, 31);
-            this.textBox1.TabIndex = 15;
+            this.Txt_nome_produto.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Txt_nome_produto.Enabled = false;
+            this.Txt_nome_produto.Location = new System.Drawing.Point(374, 51);
+            this.Txt_nome_produto.Name = "Txt_nome_produto";
+            this.Txt_nome_produto.Size = new System.Drawing.Size(378, 31);
+            this.Txt_nome_produto.TabIndex = 15;
+            this.Txt_nome_produto.TextChanged += new System.EventHandler(this.Txt_nome_produto_TextChanged);
             // 
             // pictureCircle1
             // 
@@ -462,7 +496,6 @@ namespace Loja
         private System.Windows.Forms.Button Btn_fechar_form;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private PictureCircle pictureCircle1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
@@ -474,17 +507,20 @@ namespace Loja
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button Btn_lancar_entrada;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Txt_vlr_total_nota;
+        private System.Windows.Forms.TextBox Txt_Porc_venda;
+        private System.Windows.Forms.TextBox Txt_qtd_compra;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button Btn_abrir_pesquisar;
+        public System.Windows.Forms.TextBox Txt_nome_produto;
+        public System.Windows.Forms.ComboBox Cbo_categoria_produto;
+        public System.Windows.Forms.TextBox Txt_descricao_produto;
+        public System.Windows.Forms.TextBox Txt_qtd_estoque;
+        public System.Windows.Forms.TextBox Txt_custo_produto;
+        public System.Windows.Forms.TextBox Txt_venda_produto;
+        internal PictureCircle pictureCircle1;
+        private System.Windows.Forms.TextBox Txt_novo_estoque;
+        private System.Windows.Forms.Label label10;
+        public System.Windows.Forms.Label Lbl_id;
     }
 }

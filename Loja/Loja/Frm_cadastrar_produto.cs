@@ -40,7 +40,7 @@ namespace Loja
                 SqlCommand comando = new SqlCommand
                 {
                     CommandType = CommandType.Text,
-                    CommandText = "SELECT nome FROM Categoria"
+                    CommandText = "SELECT categoria FROM Categoria"
                 };
                 comando.Connection = conexao;
                 conexao.Open();
@@ -48,7 +48,7 @@ namespace Loja
                 DataTable DT = new DataTable();
                 DT.Load(DR);
                 conexao.Close();
-                Cbo_categoria.DisplayMember = "nome";
+                Cbo_categoria.DisplayMember = "categoria";
                 Cbo_categoria.DataSource = DT;
             }
             catch (Exception ex)
@@ -71,7 +71,7 @@ namespace Loja
                     SqlCommand comando = new SqlCommand
                     {
                         CommandType = CommandType.Text,
-                        CommandText = "SELECT id FROM Categoria where nome = @nome",
+                        CommandText = "SELECT id FROM Categoria where categoria = @nome",
                         Connection = conexao
                     };
                     conexao.Open();
@@ -151,7 +151,7 @@ namespace Loja
                         Pic_foto.Image = null;
                     }
                 }
-                catch (SqlException ex)
+                catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
