@@ -82,7 +82,6 @@
     <Compile Include="PictureCircle.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Produtos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Frm_cadastrar_produto.resx">
@@ -142,5 +141,6 @@
     <Content Include="Loja Pagolinha favicon1.ico" />
     <None Include="Resources\simbolo-de-interface-de-foto-de-pesquisa-com-ferramenta-de-lupa.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

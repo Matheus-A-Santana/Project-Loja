@@ -133,48 +133,45 @@ namespace Loja
 
         private void Btn_lancar_entrada_Click(object sender, EventArgs e)
         {
-            DialogResult dialog = MessageBox.Show("Os Campos estão corretos ?","Confirmação" ,MessageBoxButtons.YesNo);
 
-            if(dialog == DialogResult.Yes)
+            DialogResult dialog = MessageBox.Show("Os Campos estão corretos ?", "Confirmação", MessageBoxButtons.YesNo);
+            if (dialog == DialogResult.Yes)
             {
-                SqlConnection conexao = new SqlConnection();
-                conexao.ConnectionString = Properties.Settings.Default.conexao;
+                    SqlConnection conexao = new SqlConnection();
+                    conexao.ConnectionString = Properties.Settings.Default.conexao;
 
-                SqlCommand comando = new SqlCommand("SP_LANCAR_ENTRADA", conexao);
-                comando.CommandType = CommandType.StoredProcedure;
-                comando.Connection = conexao;
-                conexao.Open();
+                    SqlCommand comando = new SqlCommand("SP_LANCAR_ENTRADA", conexao);
+                    comando.CommandType = System.Data.CommandType.StoredProcedure;
+                    comando.Connection = conexao;
+                    conexao.Open();
 
-                try
-                { 
-                    //lancamento de entrada
-                    comando.Parameters.Add("@quantidade", SqlDbType.Int).Value = Txt_qtd_compra.Text;
-                    comando.Parameters.Add("@custo", SqlDbType.Decimal).Value = Txt_custo_produto.Text;
-                    comando.Parameters.Add("@valor_total", SqlDbType.Decimal).Value = Txt_vlr_total_nota.Text;
-                    comando.Parameters.Add("@id_produto", SqlDbType.Int).Value = Lbl_id.Text;
-                    comando.Parameters.Add("@data", SqlDbType.DateTime).Value = Lbl_data_lancamento.Text;
-
-                    //Atualiando estoque
-                    comando.Parameters.Add("@quantidade_total", SqlDbType.Int).Value = Txt_novo_estoque.Text;
-                    comando.Parameters.Add("@venda", SqlDbType.Decimal).Value = Txt_venda_produto.Text;
-
-                    int i = comando.ExecuteNonQuery();
-                    conexao.Close();
-                    if(i > 0)
+                    try
                     {
-                        MessageBox.Show("Lançamento Efetuado com sucesso !");
-                        clear();
+                        comando.Parameters.Add("@id_produto", System.Data.SqlDbType.Int).Value = Lbl_id.Text;
+                        comando.Parameters.Add("@data", System.Data.SqlDbType.DateTime).Value = Lbl_data_lancamento.Text;
+                        comando.Parameters.Add("@quantidade", System.Data.SqlDbType.Int).Value = Txt_qtd_compra.Text;
+                        comando.Parameters.Add("@custo", System.Data.SqlDbType.Float).Value = Txt_custo_produto.Text;
+                        comando.Parameters.Add("@valor_total", System.Data.SqlDbType.Float).Value = Txt_vlr_total_nota.Text;
+
+                        comando.Parameters.Add("@quantidade_total", System.Data.SqlDbType.Int).Value = Txt_novo_estoque.Text;
+                        comando.Parameters.Add("@venda", System.Data.SqlDbType.Float).Value = Txt_venda_produto.Text;
+
+                        int i = comando.ExecuteNonQuery();
+                        conexao.Close();
+                        if (i > 0)
+                        {
+                            MessageBox.Show("Lançamento Efetuado com sucesso !");
+                            clear();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Houve um erro no lançamento !");
+                        }
                     }
-                    else
+                    catch (Exception ex)
                     {
-                        MessageBox.Show("Houve um erro no lançamento !");
+                        throw ex;
                     }
-                    
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
             }
         }
     }
