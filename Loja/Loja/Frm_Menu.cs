@@ -117,6 +117,7 @@ namespace Loja
 
         private void Btn_venda_Click(object sender, EventArgs e)
         {
+            AbrirFormPanel(new Frm_venda());
             HideSubMenu();
         }
 
