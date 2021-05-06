@@ -30,12 +30,12 @@ namespace Loja
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.Btn_fechar_form = new System.Windows.Forms.Button();
@@ -212,6 +212,7 @@ namespace Loja
             this.Cbo_pagamento.Name = "Cbo_pagamento";
             this.Cbo_pagamento.Size = new System.Drawing.Size(157, 30);
             this.Cbo_pagamento.TabIndex = 39;
+            this.Cbo_pagamento.SelectedIndexChanged += new System.EventHandler(this.Cbo_pagamento_SelectedIndexChanged);
             // 
             // Txt_valor_pago
             // 
@@ -220,6 +221,7 @@ namespace Loja
             this.Txt_valor_pago.Name = "Txt_valor_pago";
             this.Txt_valor_pago.Size = new System.Drawing.Size(157, 31);
             this.Txt_valor_pago.TabIndex = 38;
+            this.Txt_valor_pago.TextChanged += new System.EventHandler(this.Txt_valor_pago_TextChanged);
             // 
             // Txt_desconto
             // 
@@ -228,6 +230,7 @@ namespace Loja
             this.Txt_desconto.Name = "Txt_desconto";
             this.Txt_desconto.Size = new System.Drawing.Size(140, 31);
             this.Txt_desconto.TabIndex = 37;
+            this.Txt_desconto.TextChanged += new System.EventHandler(this.Txt_desconto_TextChanged);
             // 
             // Txt_total_pagar
             // 
@@ -251,6 +254,7 @@ namespace Loja
             this.Btn_finalizar_venda.TabIndex = 35;
             this.Btn_finalizar_venda.Text = "FINALIZAR";
             this.Btn_finalizar_venda.UseVisualStyleBackColor = true;
+            this.Btn_finalizar_venda.Click += new System.EventHandler(this.Btn_finalizar_venda_Click);
             // 
             // label10
             // 
@@ -445,9 +449,9 @@ namespace Loja
             // 
             // Dgv_produtos_vendas
             // 
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
-            this.Dgv_produtos_vendas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle37.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle37.ForeColor = System.Drawing.Color.Black;
+            this.Dgv_produtos_vendas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle37;
             this.Dgv_produtos_vendas.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Dgv_produtos_vendas.BackgroundColor = System.Drawing.Color.Gray;
             this.Dgv_produtos_vendas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -477,45 +481,45 @@ namespace Loja
             // 
             // Column1
             // 
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle38.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle38.ForeColor = System.Drawing.Color.Black;
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle38;
             this.Column1.HeaderText = "ID_PRODUTOS";
             this.Column1.Name = "Column1";
             this.Column1.Width = 130;
             // 
             // Column2
             // 
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle39.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle39.ForeColor = System.Drawing.Color.Black;
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle39;
             this.Column2.HeaderText = "PRODUTO";
             this.Column2.Name = "Column2";
             this.Column2.Width = 430;
             // 
             // Column3
             // 
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black;
-            this.Column3.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle40.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle40.ForeColor = System.Drawing.Color.Black;
+            this.Column3.DefaultCellStyle = dataGridViewCellStyle40;
             this.Column3.HeaderText = "QUANTIDADE";
             this.Column3.Name = "Column3";
             this.Column3.Width = 135;
             // 
             // Column4
             // 
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.Black;
-            this.Column4.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle41.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle41.ForeColor = System.Drawing.Color.Black;
+            this.Column4.DefaultCellStyle = dataGridViewCellStyle41;
             this.Column4.HeaderText = "PREÇO";
             this.Column4.Name = "Column4";
             this.Column4.Width = 120;
             // 
             // Column5
             // 
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black;
-            this.Column5.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle42.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle42.ForeColor = System.Drawing.Color.Black;
+            this.Column5.DefaultCellStyle = dataGridViewCellStyle42;
             this.Column5.HeaderText = "TOTAL";
             this.Column5.Name = "Column5";
             this.Column5.Width = 120;

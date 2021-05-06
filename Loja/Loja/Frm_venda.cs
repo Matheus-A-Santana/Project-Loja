@@ -20,7 +20,11 @@ namespace Loja
             timer1.Start();
             CargaComboBox();
             TotalCompra();
+            Txt_desconto.Text = "0";
         }
+
+        private int id_pagamento;
+        private int id_venda;
 
         private void CargaComboBox()
         {
@@ -141,6 +145,7 @@ namespace Loja
                 Pic_imagem_produto.Refresh();
                 Txt_id_produto.Focus();
                 TotalCompra();
+                Txt_valor_pago.Text = Txt_total_pagar.Text;
             }
             else
             {
@@ -157,13 +162,164 @@ namespace Loja
 
         private void TotalCompra()
         {
-            double total = 0;
+            double total = 0, desconto = 0;
             
             foreach(DataGridViewRow Row in Dgv_produtos_vendas.Rows)
             {
                 total += Convert.ToDouble(Row.Cells["Column5"].Value);
             }
-            Txt_total_pagar.Text = Convert.ToString(total);
+            if(Txt_desconto.Text != "")
+            {
+                desconto = Convert.ToDouble(Txt_desconto.Text);
+                Txt_total_pagar.Text = Convert.ToString(total - desconto);
+            }
+            else
+            {
+                Txt_total_pagar.Text = Convert.ToString(total);
+            }
+        }
+
+        private void Troco()
+        {
+            double total = 0, valor_pago = 0;
+            if(Txt_valor_pago.Text != "")
+            {
+                total = Convert.ToDouble(Txt_total_pagar.Text.Trim());
+                valor_pago = Convert.ToDouble(Txt_valor_pago.Text.Trim());
+
+                Txt_troco.Text = Convert.ToString(valor_pago - total);
+            }
+        }
+
+        private void Txt_desconto_TextChanged(object sender, EventArgs e)
+        {
+            TotalCompra();
+        }
+
+        private void Txt_valor_pago_TextChanged(object sender, EventArgs e)
+        {
+            Troco();
+        }
+
+        private void Cbo_pagamento_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Cbo_pagamento.Text != "")
+            {
+                try
+                {
+                    SqlConnection conexao = new SqlConnection
+                    {
+                        ConnectionString = Properties.Settings.Default.conexao
+                    };
+
+                    SqlCommand comando = new SqlCommand
+                    {
+                        CommandType = CommandType.Text,
+                        CommandText = "SELECT id FROM forma_pagamento WHERE forma = @nome",
+                        Connection = conexao
+                    };
+                    conexao.Open();
+                    comando.Parameters.Add("@nome", SqlDbType.VarChar).Value = Cbo_pagamento.Text;
+                    SqlDataReader DR = comando.ExecuteReader();
+
+                    if (DR.HasRows)
+                    {
+                        while (DR.Read())
+                        {
+                            id_pagamento = Convert.ToInt32(DR["id"]);
+                        }
+                    }
+                    conexao.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Selecione uma Forma de pagamento !");
+            }
+        }
+
+
+        private void Btn_finalizar_venda_Click(object sender, EventArgs e)
+        {
+            SqlConnection conexao = new SqlConnection();
+            conexao.ConnectionString = Properties.Settings.Default.conexao;
+
+            SqlCommand comando = new SqlCommand("SP_LANCAR_VENDA", conexao);
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Connection = conexao;
+            conexao.Open();
+            try
+            {
+                comando.Parameters.Add("@total_venda", SqlDbType.Money).Value = Txt_total_pagar.Text;
+                comando.Parameters.Add("@data", SqlDbType.Date).Value = Lbl_data_lancamento.Text;
+                comando.Parameters.Add("@hora", SqlDbType.Time).Value = Lbl_hora.Text;
+                comando.Parameters.Add("@id_pagamento", SqlDbType.Int).Value = id_pagamento;
+
+                comando.ExecuteNonQuery();
+                conexao.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            SqlCommand comando2 = new SqlCommand();
+            comando.CommandText = "SELECT MAX(id) FROM venda";
+            comando.CommandType = CommandType.Text;
+            comando.Connection = conexao;
+            conexao.Open();
+            try
+            {
+                SqlDataReader dr = comando.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    id_venda = dr.GetInt32(0);
+                }
+                conexao.Close();
+                MessageBox.Show(id_venda.ToString());
+            }
+            catch (Exception ex2)
+            {
+                MessageBox.Show(ex2.Message);
+            }
+
+            SqlCommand comando3 = new SqlCommand("SP_LANCAR_SAIDA", conexao);
+            comando3.CommandType = CommandType.StoredProcedure;
+            comando3.Connection = conexao;
+            conexao.Open();
+
+            try
+            {
+                for(int i = 0; i < Dgv_produtos_vendas.Rows.Count-1; i++)
+                {
+                    comando3.Parameters.Add("@id_produto", SqlDbType.Int).Value = Dgv_produtos_vendas.Rows[i].Cells[0].Value;
+                    comando3.Parameters.Add("@quantidade", SqlDbType.Int).Value = Dgv_produtos_vendas.Rows[i].Cells[2].Value;
+                    comando3.Parameters.Add("@preco", SqlDbType.Money).Value = Dgv_produtos_vendas.Rows[i].Cells[3].Value;
+                    comando3.Parameters.Add("@total", SqlDbType.Money).Value = Dgv_produtos_vendas.Rows[i].Cells[4].Value;
+                    comando3.Parameters.Add("@desconto", SqlDbType.Money).Value =  Txt_desconto.Text;
+                    comando3.Parameters.Add("@id_venda", SqlDbType.Int).Value = id_venda;
+                    
+                    comando3.ExecuteNonQuery();
+                    comando3.Parameters.Clear();
+                }
+                conexao.Close();
+                MessageBox.Show("Venda Finalizada !");
+                Dgv_produtos_vendas.Rows.Clear();
+                Txt_total_pagar.Text = "";
+                Txt_valor_pago.Text = "";
+                Txt_desconto.Text = "";
+                Txt_troco.Text = "";
+                Cbo_pagamento.SelectedIndex = 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
