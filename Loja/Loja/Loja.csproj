@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Frm_Abrir_Caixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Abrir_Caixa.Designer.cs">
+      <DependentUpon>Frm_Abrir_Caixa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_cadastrar_produto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +96,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Frm_Abrir_Caixa.resx">
+      <DependentUpon>Frm_Abrir_Caixa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_cadastrar_produto.resx">
       <DependentUpon>Frm_cadastrar_produto.cs</DependentUpon>
     </EmbeddedResource>
