@@ -321,5 +321,51 @@ namespace Loja
                 MessageBox.Show(ex.Message);
             }
         }
+        private bool situacao = false; 
+
+        private void Frm_venda_Load(object sender, EventArgs e)
+        {
+            SqlConnection conexao = new SqlConnection
+            {
+                ConnectionString = Properties.Settings.Default.conexao
+            };
+
+            SqlCommand comando = new SqlCommand
+            {
+                CommandType = CommandType.Text,
+                CommandText = "SELECT * FROM Caixa WHERE id = (SELECT MAX(id) FROM Caixa)",
+                Connection = conexao
+            };
+            conexao.Open();
+
+            SqlDataReader dr = comando.ExecuteReader();
+            try
+            {
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        situacao = Convert.ToBoolean(dr["situacao"]);
+                    }
+                    conexao.Close();
+                    if (situacao == false)
+                    {
+                        Frm_Abrir_Caixa Abertura = new Frm_Abrir_Caixa();
+                        Abertura.Show();
+                    }
+                }
+                else
+                {
+                    Frm_Abrir_Caixa Abertura = new Frm_Abrir_Caixa();
+                    Abertura.Show();
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

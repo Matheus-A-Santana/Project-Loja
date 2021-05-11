@@ -124,6 +124,7 @@ namespace Loja
         private void Btn_fechamento_Click(object sender, EventArgs e)
         {
             HideSubMenu();
+            AbrirFormPanel(new Frm_Fechar_Caixa());
         }
 
         private void Btn_sangria_Click(object sender, EventArgs e)

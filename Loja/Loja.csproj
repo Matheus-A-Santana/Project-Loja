@@ -73,6 +73,12 @@
     <Compile Include="Frm_entrada_produto.Designer.cs">
       <DependentUpon>Frm_entrada_produto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_Fechar_Caixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Fechar_Caixa.Designer.cs">
+      <DependentUpon>Frm_Fechar_Caixa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_entrada_produto.resx">
       <DependentUpon>Frm_entrada_produto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Fechar_Caixa.resx">
+      <DependentUpon>Frm_Fechar_Caixa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Menu.resx">
       <DependentUpon>Frm_Menu.cs</DependentUpon>

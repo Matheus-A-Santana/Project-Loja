@@ -36,9 +36,30 @@ namespace Loja
                 SqlConnection conexao = new SqlConnection();
                 conexao.ConnectionString = Properties.Settings.Default.conexao;
 
-                SqlCommand comando = new SqlCommand();
+                SqlCommand comando = new SqlCommand("SP_ABRIR_CAIXA", conexao);
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Connection = conexao;
 
+                try
+                {
+                    conexao.Open();
 
+                    comando.Parameters.Add("@situacao", SqlDbType.Bit).Value = true;
+                    comando.Parameters.Add("@abertura", SqlDbType.Money).Value = Txt_valor_abertura.Text;
+                    comando.Parameters.Add("@data", SqlDbType.Date).Value = Lbl_data.Text;
+
+                    comando.ExecuteNonQuery();
+                    MessageBox.Show("Caixa Aberto !");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    conexao.Close();
+                    this.Close();
+                }
             }
             else
             {

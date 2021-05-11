@@ -30,16 +30,22 @@ namespace Loja
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.Btn_fechar_form = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Dgv_produtos_vendas = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Lbl_total = new System.Windows.Forms.Label();
             this.Lbl_hora = new System.Windows.Forms.Label();
             this.Lbl_data_lancamento = new System.Windows.Forms.Label();
@@ -55,6 +61,7 @@ namespace Loja
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.Btn_Adcionar = new System.Windows.Forms.Button();
+            this.Pic_imagem_produto = new Loja.PictureCircle();
             this.Btn_abrir_pesquisar = new System.Windows.Forms.Button();
             this.Txt_valor_produto = new System.Windows.Forms.TextBox();
             this.Txt_quantidade_compra = new System.Windows.Forms.TextBox();
@@ -65,13 +72,6 @@ namespace Loja
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.Dgv_produtos_vendas = new System.Windows.Forms.DataGridView();
-            this.Pic_imagem_produto = new Loja.PictureCircle();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_produtos_vendas)).BeginInit();
@@ -156,6 +156,71 @@ namespace Loja
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1245, 658);
             this.panel1.TabIndex = 2;
+            // 
+            // Dgv_produtos_vendas
+            // 
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.Dgv_produtos_vendas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.Dgv_produtos_vendas.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Dgv_produtos_vendas.BackgroundColor = System.Drawing.Color.Gray;
+            this.Dgv_produtos_vendas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Dgv_produtos_vendas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5});
+            this.Dgv_produtos_vendas.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Dgv_produtos_vendas.Location = new System.Drawing.Point(123, 227);
+            this.Dgv_produtos_vendas.Name = "Dgv_produtos_vendas";
+            this.Dgv_produtos_vendas.Size = new System.Drawing.Size(980, 238);
+            this.Dgv_produtos_vendas.TabIndex = 44;
+            // 
+            // Column1
+            // 
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Column1.HeaderText = "ID_PRODUTOS";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 130;
+            // 
+            // Column2
+            // 
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Column2.HeaderText = "PRODUTO";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 430;
+            // 
+            // Column3
+            // 
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.Column3.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Column3.HeaderText = "QUANTIDADE";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 135;
+            // 
+            // Column4
+            // 
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            this.Column4.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Column4.HeaderText = "PREÇO";
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 120;
+            // 
+            // Column5
+            // 
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            this.Column5.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Column5.HeaderText = "TOTAL";
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 120;
             // 
             // Lbl_total
             // 
@@ -337,6 +402,18 @@ namespace Loja
             this.Btn_Adcionar.UseVisualStyleBackColor = true;
             this.Btn_Adcionar.Click += new System.EventHandler(this.Btn_Adcionar_Click);
             // 
+            // Pic_imagem_produto
+            // 
+            this.Pic_imagem_produto.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Pic_imagem_produto.BackColor = System.Drawing.Color.Gray;
+            this.Pic_imagem_produto.Enabled = false;
+            this.Pic_imagem_produto.Location = new System.Drawing.Point(922, 41);
+            this.Pic_imagem_produto.Name = "Pic_imagem_produto";
+            this.Pic_imagem_produto.Size = new System.Drawing.Size(180, 180);
+            this.Pic_imagem_produto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Pic_imagem_produto.TabIndex = 27;
+            this.Pic_imagem_produto.TabStop = false;
+            // 
             // Btn_abrir_pesquisar
             // 
             this.Btn_abrir_pesquisar.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -447,83 +524,6 @@ namespace Loja
             // 
             this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
-            // Dgv_produtos_vendas
-            // 
-            dataGridViewCellStyle37.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle37.ForeColor = System.Drawing.Color.Black;
-            this.Dgv_produtos_vendas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle37;
-            this.Dgv_produtos_vendas.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Dgv_produtos_vendas.BackgroundColor = System.Drawing.Color.Gray;
-            this.Dgv_produtos_vendas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Dgv_produtos_vendas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5});
-            this.Dgv_produtos_vendas.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Dgv_produtos_vendas.Location = new System.Drawing.Point(123, 227);
-            this.Dgv_produtos_vendas.Name = "Dgv_produtos_vendas";
-            this.Dgv_produtos_vendas.Size = new System.Drawing.Size(980, 238);
-            this.Dgv_produtos_vendas.TabIndex = 44;
-            // 
-            // Pic_imagem_produto
-            // 
-            this.Pic_imagem_produto.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Pic_imagem_produto.BackColor = System.Drawing.Color.Gray;
-            this.Pic_imagem_produto.Enabled = false;
-            this.Pic_imagem_produto.Location = new System.Drawing.Point(922, 41);
-            this.Pic_imagem_produto.Name = "Pic_imagem_produto";
-            this.Pic_imagem_produto.Size = new System.Drawing.Size(180, 180);
-            this.Pic_imagem_produto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Pic_imagem_produto.TabIndex = 27;
-            this.Pic_imagem_produto.TabStop = false;
-            // 
-            // Column1
-            // 
-            dataGridViewCellStyle38.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle38.ForeColor = System.Drawing.Color.Black;
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle38;
-            this.Column1.HeaderText = "ID_PRODUTOS";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 130;
-            // 
-            // Column2
-            // 
-            dataGridViewCellStyle39.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle39.ForeColor = System.Drawing.Color.Black;
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle39;
-            this.Column2.HeaderText = "PRODUTO";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 430;
-            // 
-            // Column3
-            // 
-            dataGridViewCellStyle40.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle40.ForeColor = System.Drawing.Color.Black;
-            this.Column3.DefaultCellStyle = dataGridViewCellStyle40;
-            this.Column3.HeaderText = "QUANTIDADE";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 135;
-            // 
-            // Column4
-            // 
-            dataGridViewCellStyle41.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle41.ForeColor = System.Drawing.Color.Black;
-            this.Column4.DefaultCellStyle = dataGridViewCellStyle41;
-            this.Column4.HeaderText = "PREÇO";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 120;
-            // 
-            // Column5
-            // 
-            dataGridViewCellStyle42.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle42.ForeColor = System.Drawing.Color.Black;
-            this.Column5.DefaultCellStyle = dataGridViewCellStyle42;
-            this.Column5.HeaderText = "TOTAL";
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 120;
-            // 
             // Frm_venda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
@@ -537,6 +537,7 @@ namespace Loja
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Name = "Frm_venda";
             this.Text = "Frm_venda";
+            this.Load += new System.EventHandler(this.Frm_venda_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.panel1.ResumeLayout(false);
