@@ -29,6 +29,7 @@ namespace Loja
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.Tbl_caixa = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.Btn_fechar_form = new System.Windows.Forms.Button();
@@ -38,6 +39,7 @@ namespace Loja
             this.label3 = new System.Windows.Forms.Label();
             this.Txt_valor_fechamento = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.Tbl_caixa.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -165,6 +167,11 @@ namespace Loja
             this.label2.TabIndex = 37;
             this.label2.Text = "Fechamento:";
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Frm_Fechar_Caixa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
@@ -198,5 +205,6 @@ namespace Loja
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox Txt_valor_fechamento;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Timer timer1;
     }
 }
