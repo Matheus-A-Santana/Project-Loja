@@ -130,6 +130,7 @@ namespace Loja
         private void Btn_sangria_Click(object sender, EventArgs e)
         {
             HideSubMenu();
+            AbrirFormPanel(new Frm_Sangria_caixa());
         }
 
         private void Btn_entrada_Click(object sender, EventArgs e)

@@ -47,9 +47,7 @@ namespace Loja
                             MessageBox.Show("ultima tenativa !");
                         goto inicio;
                     }
-                    Salvar();
-                    valor_divergencia = valor_abertura - valor_fechamento;
-                    MessageBox.Show("Divergencia de: " + valor_divergencia.ToString());   
+                    Salvar();  
                 }
                 else
                 {
@@ -66,6 +64,9 @@ namespace Loja
             SqlCommand comando = new SqlCommand("SP_FECHAR_CAIXA", conexao);
             comando.CommandType = CommandType.StoredProcedure;
             comando.Connection = conexao;
+
+            valor_divergencia = valor_abertura - valor_fechamento;
+            MessageBox.Show("Divergencia de: " + valor_divergencia.ToString());
 
             try
             {

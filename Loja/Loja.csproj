@@ -91,6 +91,12 @@
     <Compile Include="Frm_pesquisar_produto%28entrada%29.Designer.cs">
       <DependentUpon>Frm_pesquisar_produto%28entrada%29.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_Sangria_caixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Sangria_caixa.Designer.cs">
+      <DependentUpon>Frm_Sangria_caixa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_venda.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_pesquisar_produto%28entrada%29.resx">
       <DependentUpon>Frm_pesquisar_produto%28entrada%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Sangria_caixa.resx">
+      <DependentUpon>Frm_Sangria_caixa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_venda.resx">
       <DependentUpon>Frm_venda.cs</DependentUpon>

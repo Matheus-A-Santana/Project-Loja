@@ -327,7 +327,7 @@ namespace Loja
                                 id_venda = DR.GetInt32(0);
                             }
                             conexao.Close();
-                            MessageBox.Show(id_venda.ToString());
+                            MessageBox.Show("O id da venda é: " + id_venda.ToString());
                         }
                         catch (Exception ex2)
                         {
