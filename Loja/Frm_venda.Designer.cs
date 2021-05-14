@@ -61,7 +61,6 @@ namespace Loja
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.Btn_Adcionar = new System.Windows.Forms.Button();
-            this.Pic_imagem_produto = new Loja.PictureCircle();
             this.Btn_abrir_pesquisar = new System.Windows.Forms.Button();
             this.Txt_valor_produto = new System.Windows.Forms.TextBox();
             this.Txt_quantidade_compra = new System.Windows.Forms.TextBox();
@@ -72,6 +71,7 @@ namespace Loja
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.Pic_imagem_produto = new Loja.PictureCircle();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_produtos_vendas)).BeginInit();
@@ -402,18 +402,6 @@ namespace Loja
             this.Btn_Adcionar.UseVisualStyleBackColor = true;
             this.Btn_Adcionar.Click += new System.EventHandler(this.Btn_Adcionar_Click);
             // 
-            // Pic_imagem_produto
-            // 
-            this.Pic_imagem_produto.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Pic_imagem_produto.BackColor = System.Drawing.Color.Gray;
-            this.Pic_imagem_produto.Enabled = false;
-            this.Pic_imagem_produto.Location = new System.Drawing.Point(922, 41);
-            this.Pic_imagem_produto.Name = "Pic_imagem_produto";
-            this.Pic_imagem_produto.Size = new System.Drawing.Size(180, 180);
-            this.Pic_imagem_produto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Pic_imagem_produto.TabIndex = 27;
-            this.Pic_imagem_produto.TabStop = false;
-            // 
             // Btn_abrir_pesquisar
             // 
             this.Btn_abrir_pesquisar.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -429,6 +417,7 @@ namespace Loja
             this.Btn_abrir_pesquisar.Size = new System.Drawing.Size(35, 31);
             this.Btn_abrir_pesquisar.TabIndex = 26;
             this.Btn_abrir_pesquisar.UseVisualStyleBackColor = true;
+            this.Btn_abrir_pesquisar.Click += new System.EventHandler(this.Btn_abrir_pesquisar_Click);
             // 
             // Txt_valor_produto
             // 
@@ -524,6 +513,18 @@ namespace Loja
             // 
             this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
+            // Pic_imagem_produto
+            // 
+            this.Pic_imagem_produto.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Pic_imagem_produto.BackColor = System.Drawing.Color.Gray;
+            this.Pic_imagem_produto.Enabled = false;
+            this.Pic_imagem_produto.Location = new System.Drawing.Point(922, 41);
+            this.Pic_imagem_produto.Name = "Pic_imagem_produto";
+            this.Pic_imagem_produto.Size = new System.Drawing.Size(180, 180);
+            this.Pic_imagem_produto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Pic_imagem_produto.TabIndex = 27;
+            this.Pic_imagem_produto.TabStop = false;
+            // 
             // Frm_venda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
@@ -561,7 +562,6 @@ namespace Loja
         private System.Windows.Forms.TextBox Txt_valor_produto;
         private System.Windows.Forms.TextBox Txt_quantidade_compra;
         private System.Windows.Forms.TextBox Txt_nome_produto;
-        private System.Windows.Forms.TextBox Txt_id_produto;
         private System.Windows.Forms.Button Btn_abrir_pesquisar;
         private System.Windows.Forms.Button Btn_Adcionar;
         private PictureCircle Pic_imagem_produto;
@@ -586,5 +586,6 @@ namespace Loja
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        public System.Windows.Forms.TextBox Txt_id_produto;
     }
 }

@@ -433,5 +433,11 @@ namespace Loja
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void Btn_abrir_pesquisar_Click(object sender, EventArgs e)
+        {
+            Frm_pesquisar_produto_venda_ pesquisar = new Frm_pesquisar_produto_venda_();
+            pesquisar.Show();
+        }
     }
 }

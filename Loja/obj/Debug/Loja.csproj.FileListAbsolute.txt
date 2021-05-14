@@ -28,3 +28,4 @@ D:\Repositório GIT\Loja\Loja\obj\Debug\Loja.Frm_Abrir_Caixa.resources
 D:\Repositório GIT\Loja\Loja\obj\Debug\Loja.Frm_Fechar_Caixa.resources
 D:\Repositório GIT\Loja\Loja\obj\Debug\Loja.csprojAssemblyReference.cache
 D:\Repositório GIT\Loja\Loja\obj\Debug\Loja.Frm_Sangria_caixa.resources
+D:\Repositório GIT\Loja\Loja\obj\Debug\Loja.Frm_pesquisar_produto_venda_.resources
